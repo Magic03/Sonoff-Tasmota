@@ -42,6 +42,37 @@
  *   - All parameters can be persistent changed online using commands via MQTT, WebConsole or Serial.
 \*****************************************************************************************************/
 
+
+// -- Wifi ----------------------------------------
+#undef STA_SSID1
+#define STA_SSID1              ""                // [Ssid1] Wifi SSID
+#undef STA_PASS1
+#define STA_PASS1              ""                // [Password1] Wifi password
+
+#undef STA_SSID2
+#define STA_SSID2              ""                // [Ssid2] Optional alternate AP Wifi SSID
+#undef STA_PASS2
+#define STA_PASS2              ""                // [Password2] Optional alternate AP Wifi password
+
+// -- MQTT ----------------------------------------
+#undef MQTT_TOPIC
+#define MQTT_TOPIC             "sonoff"           // [Topic] (unique) MQTT device topic
+
+// -- HTTP ----------------------------------------
+#undef WEB_SERVER
+#define WEB_SERVER             2                 // [WebServer] Web server (0 = Off, 1 = Start as User, 2 = Start as Admin)
+#undef WEB_PASSWORD
+#define WEB_PASSWORD           ""                // [WebPassword] Web server Admin mode Password for WEB_USERNAME (empty string = Disable)
+
+// -- Application ---------------------------------
+#undef APP_LEDSTATE
+#define APP_LEDSTATE           LED_OFF         // [LedState] Function of led
+                                               //   (LED_OFF, LED_POWER, LED_MQTTSUB, LED_POWER_MQTTSUB, LED_MQTTPUB, LED_POWER_MQTTPUB, LED_MQTT, LED_POWER_MQTT)
+
+#undef SWITCH_MODE
+#define SWITCH_MODE            TOGGLE            // [SwitchMode] TOGGLE, FOLLOW, FOLLOW_INV, PUSHBUTTON, PUSHBUTTON_INV, PUSHBUTTONHOLD, PUSHBUTTONHOLD_INV, PUSHBUTTON_TOGGLE (the wall switch state)
+
+
 /*
 Examples :
 
