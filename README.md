@@ -1,15 +1,15 @@
 ## Install platformio & tools
 pipenv install --dev
 
+## Config
+1. Copy `sonoff/user_config_override_sample.h` -> `sonoff/user_config_override.h`
+2. Add custom config
+
 ## Upload firmware
 1. enter pipenv shell: `pipenv shell`
 2. keep button pressed while plugging usb
 3. get port path: `pio device list`
 4. upload: `pio run -t upload --upload-port <port>`
-
-## Config
-1. Copy `sonoff/user_config_override_sample.h` -> `sonoff/user_config_override.h`
-2. Add custom config
 
 ## Tweak if not working:
 platformio.ini: `upload_speed`
